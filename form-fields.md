@@ -16,12 +16,11 @@ This documents the structure of the Google Form used to collect meeting transcri
 
 | # | Field Label | Type | Required | Notes |
 |---|---|---|---|---|
-| 1 | Meeting Title | Short answer | No | Used as the email subject line and summary header. If blank, Gemini infers from transcript. |
-| 2 | Your Email Address | Short answer | Yes | Destination for the summary email. Validated as email format. |
-| 3 | Paste your transcript here | Paragraph (long text) | No | For plain-text transcripts copied directly from a tool like Zoom, Teams, or Fathom. |
-| 4 | Or upload your transcript file | File upload | No | Accepts .txt, .docx, .pdf. Max file size: 10MB. |
+| 1 | Email Address | Short answer | Yes | Destination for the summary email. Validated as email format. |
+| 2 | Please paste the complete meeting transcript here: | Paragraph (long text) | No | For plain-text transcripts copied directly from a tool like Zoom, Teams, or Fathom. (Approximately 30,000 characters) |
+| 3 | Upload transcript | File upload | No | Accepts .txt, .docx, .pdf. |
 
-> **Note:** Fields 3 and 4 are both optional individually, but the form description instructs users to fill at least one. A future improvement would be to add server-side validation in Make.com that checks for this and sends an error email if both are empty.
+> **Note:** Fields 2 and 3 are both optional individually, but the form description instructs users to fill at least one. A future improvement would be to add server-side validation in Make.com that checks for this and sends an error email if both are empty.
 
 ---
 
@@ -29,7 +28,6 @@ This documents the structure of the Google Form used to collect meeting transcri
 
 | Google Form Field | Make.com Variable |
 |---|---|
-| Meeting Title | `{{1.answers.meeting_title.value}}` |
 | Email Address | `{{1.answers.email.value}}` |
 | Pasted transcript | `{{1.answers.transcript_text.value}}` |
 | Uploaded file | `{{14.data}}` (binary, passed through `toString()`) |
