@@ -7,7 +7,6 @@ It is injected once per form submission, with the transcript appended at the end
 
 ## The Prompt
 
-'''
 "Act as a professional meeting assistant. I will provide you with a meeting transcript that includes timestamps and speaker names. Your goal is to generate a structured, scannable summary that captures the essence of the conversation.
 
 Please organize the summary using the following format:
@@ -37,7 +36,6 @@ Maintain Professionalism: Use clear, business-appropriate language.
 Transcript to process: {{7.answers.`67c4efc3`.textAnswers.answers[].value}}
 
 Provide the response in HTML format so it can be sent directly via email. Use <p>, <ul>, <li>, and <strong> tags. Dont mention the word header. Just have them in the result. Also do not have the subject, just include the body. have a greater font size for the Meeting Purpose, Key Takeaways, Topics (Detailed breakdown), Next Steps, Annotations etc."
-'''
 
 ---
 
