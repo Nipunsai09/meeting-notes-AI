@@ -20,7 +20,7 @@ Most meeting recordings produce long, messy transcripts. This tool takes that tr
 ### Submission Form
 > A simple Google Form accepts either a pasted transcript or a file upload (.txt, .docx, .pdf).
 
-![Form Screenshot](assets/form-preview.png)
+https://forms.gle/trEkun7SiZwVBhV29
 
 ### Sample Output Email
 > See [`sample-output/sample-summary.html`](sample-output/sample-summary.html) for a full rendered example.
