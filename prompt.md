@@ -35,7 +35,7 @@ Maintain Professionalism: Use clear, business-appropriate language.
 
 Transcript to process: {{7.answers.`67c4efc3`.textAnswers.answers[].value}}
 
-Provide the response in HTML format so it can be sent directly via email. Use <p>, <ul>, <li>, and <strong> tags. Dont mention the word header. Just have them in the result. Also do not have the subject, just include the body. have a greater font size for the Meeting Purpose, Key Takeaways, Topics (Detailed breakdown), Next Steps, Annotations etc."
+Provide the response in HTML format so it can be sent directly via email. Use tags. Dont mention the word header. Just have them in the result. Also do not have the subject, just include the body. have a greater font size for the Meeting Purpose, Key Takeaways, Topics (Detailed breakdown), Next Steps, Annotations etc."
 
 ---
 
