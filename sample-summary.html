@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meeting Summary — Q3 Product Roadmap Review</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #1a1a1a;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 24px;
+      line-height: 1.6;
+    }
+    h1 { font-size: 22px; margin-bottom: 4px; }
+    .date { color: #666; font-size: 13px; margin-bottom: 24px; }
+    h2 { font-size: 17px; margin-top: 28px; margin-bottom: 8px; border-bottom: 1px solid #e0e0e0; padding-bottom: 4px; }
+    h3 { font-size: 15px; margin-top: 18px; margin-bottom: 4px; }
+    ul { padding-left: 20px; margin: 6px 0; }
+    li { margin-bottom: 5px; }
+    .annotation-block {
+      background: #f9f5ff;
+      border-left: 3px solid #7c3aed;
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .annotation-block strong { color: #5b21b6; }
+    .participants { color: #555; font-size: 13px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Q3 Product Roadmap Review</h1>
+  <p class="date">April 28, 2025</p>
+  <p class="participants"><strong>Participants:</strong> Sarah Chen (Product Lead), Marcus Rivera (Engineering), Priya Nair (Design), Tom Okafor (Marketing)</p>
+
+  <h2>Meeting Purpose</h2>
+  <p>To align the product, engineering, design, and marketing teams on Q3 priorities — specifically finalizing the dashboard redesign scope, addressing Q2 carryover tickets, and setting a release timeline tied to the August conference.</p>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>The dashboard redesign will ship with <strong>five widgets</strong> (not six) in Q3, with the custom metrics panel deferred to a follow-up release to reduce engineering complexity.</li>
+    <li>The target release window is <strong>mid-Q3 (week of July 21)</strong>, timed to coincide with the annual conference for a live showcase.</li>
+    <li>The onboarding "invite your team" drop-off (34%) is a recognized problem; a redesign proposal will be scoped for Q4.</li>
+    <li>API v1 will be deprecated in October following a 90-day customer notice sent in July.</li>
+    <li>Two Q2 carryover tickets (export feature, notification preferences) are P0 priorities before new Q3 work begins.</li>
+  </ul>
+
+  <h2>Topics — Detailed Breakdown</h2>
+
+  <h3>Q2 Carryover Tickets</h3>
+  <p>Two incomplete tickets from Q2 were flagged as P0 carryovers: the export feature and the notification preferences page. Export design specs are finalized. Priya will deliver mobile states for the notification preferences page by Thursday, allowing Marcus's team to begin that ticket on Friday.</p>
+
+  <h3>Dashboard Redesign — Widget-Based Layout</h3>
+  <p>The current dashboard shows all metrics by default, which enterprise customers find overwhelming. The redesign introduces a configurable widget layout where users can pin, reorder, and remove panels. Six widget types were designed; five will ship in Q3 (revenue summary, active users, churn rate, recent activity feed, goal tracker). The sixth — a custom metrics panel requiring user-defined backend queries — will be deferred due to an estimated three-week engineering effort.</p>
+
+  <h3>Conference Launch Target</h3>
+  <p>Marketing confirmed that a mid-Q3 release aligns with the annual conference in early August, making it an ideal showcase moment. Tom needs final screenshots by July 7 to prepare launch assets (email campaign, in-app announcement, landing page update). Marcus will prepare a sprint plan by end of week.</p>
+
+  <h3>Onboarding Drop-off</h3>
+  <p>A 34% drop-off at the "invite your team" step was discussed. Priya's hypothesis is that the step asks for a user commitment before the product has demonstrated value. The proposed fix is to move the invite prompt to after the first dashboard is configured, making it a natural next step rather than a gate. Priya will write up a proposal for exec review; implementation is targeted for Q4.</p>
+
+  <h3>API Versioning — v1 Deprecation</h3>
+  <p>Maintaining v1 and v2 in parallel for eight months has created significant engineering overhead. The team agreed to send a deprecation notice to customers in July and sunset v1 in October. Tom will draft the customer-facing communication; Marcus will provide the technical details.</p>
+
+  <h2>Next Steps</h2>
+  <ul>
+    <li><strong>Priya</strong> — Deliver notification preferences mobile states to Marcus by Thursday.</li>
+    <li><strong>Priya</strong> — Share Figma link for dashboard redesign after the call.</li>
+    <li><strong>Marcus</strong> — Prepare sprint plan for five-widget dashboard release by end of week.</li>
+    <li><strong>Tom</strong> — Prepare launch assets; requires final screenshots from engineering by July 7.</li>
+    <li><strong>Priya</strong> — Write up onboarding redesign proposal (move invite step post-setup) by next Friday.</li>
+    <li><strong>Tom</strong> — Draft API v1 deprecation communication (customer-facing language); coordinate with Marcus for technical details.</li>
+    <li><strong>Sarah</strong> — Send meeting summary to all participants.</li>
+  </ul>
+
+  <h2>Annotations</h2>
+
+  <div class="annotation-block">
+    <p><strong>🔖 Dashboard Redesign Scope</strong> [01:15]</p>
+    <p>Sarah explained that 40 enterprise customers flagged the current dashboard as too overwhelming, leading to the decision to build a configurable widget-based layout instead of showing all metrics by default.</p>
+  </div>
+
+  <div class="annotation-block">
+    <p><strong>🔖 Conference Launch Target</strong> [02:48]</p>
+    <p>The team aligned on a mid-Q3 release target timed to the annual conference in early August, with Tom confirming marketing needs final screenshots by July 7.</p>
+  </div>
+
+  <div class="annotation-block">
+    <p><strong>🔖 Onboarding Drop-off Problem</strong> [03:40]</p>
+    <p>Priya proposed moving the "invite your team" step to after the first dashboard setup to reduce the 34% drop-off by earning user trust before asking for a commitment.</p>
+  </div>
+
+</body>
+</html>

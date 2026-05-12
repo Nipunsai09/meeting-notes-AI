@@ -1,0 +1,68 @@
+Meeting: Q3 Product Roadmap Review
+Date: April 28, 2025
+Participants: Sarah Chen (Product Lead), Marcus Rivera (Engineering), Priya Nair (Design), Tom Okafor (Marketing)
+
+---
+
+[00:00] Sarah Chen: Alright, let's get started. The goal today is to lock in our Q3 priorities and align on the dashboard redesign before Marcus's team starts sprint planning next week.
+
+[00:22] Marcus Rivera: Quick note — we're still carrying two tickets from Q2 that weren't completed. The export feature and the notification preferences page. I'd like to factor those in before we take on anything new.
+
+[00:41] Sarah Chen: Agreed. Let's flag those as P0 carryovers. Priya, can you confirm the design specs for both are finalized?
+
+[00:49] Priya Nair: Export is done. Notification preferences — I still need about two days to finish the mobile states. I can have it to Marcus by Thursday.
+
+[01:02] Marcus Rivera: Thursday works. We won't start that ticket until Friday anyway.
+
+--- HIGHLIGHT: Dashboard Redesign Scope ---
+[01:15] Sarah Chen: Okay, main agenda item — the dashboard redesign. We got feedback from 40 enterprise customers last quarter that the current layout makes it hard to surface the metrics they care about. The core problem is that we're showing everything by default instead of letting users configure their view.
+
+[01:38] Priya Nair: Right, and that's what the new design addresses. We're moving to a widget-based layout. Users can pin, remove, and reorder the panels they want. I can share the Figma link after this call.
+
+[01:52] Marcus Rivera: How many widget types are we supporting at launch?
+
+[01:56] Priya Nair: Six. Revenue summary, active users, churn rate, recent activity feed, goal tracker, and a custom metrics panel.
+
+[02:08] Marcus Rivera: The custom metrics panel is the tricky one. That requires backend changes to support user-defined queries. I'd estimate three weeks of engineering work minimum.
+
+[02:19] Sarah Chen: Can we ship the other five widgets first and add custom metrics in a follow-up release?
+
+[02:25] Marcus Rivera: Yes, that's cleaner actually. Five widgets is maybe ten days of work. We could hit a mid-Q3 release.
+
+[02:33] Tom Okafor: From a marketing standpoint, mid-Q3 is actually perfect. We have the annual conference in early August and a redesigned dashboard would be great to showcase.
+
+--- BOOKMARK: Conference Launch Target ---
+[02:48] Sarah Chen: Let's make that the target. Five widgets, mid-Q3 release, conference demo. Marcus, can you put together a rough sprint plan by end of week?
+
+[02:58] Marcus Rivera: Will do.
+
+[03:05] Tom Okafor: I'll need about two weeks of lead time to prepare the launch assets — email, in-app announcement, landing page update. So if we're targeting the week of July 21st, I need final screenshots by July 7th.
+
+[03:20] Priya Nair: That should be fine assuming Marcus hits the mid-Q3 window.
+
+[03:27] Sarah Chen: Okay. Let's also talk briefly about the onboarding flow. We've seen a 34% drop-off at the "invite your team" step. Priya, you mentioned last week you had some ideas.
+
+--- HIGHLIGHT: Onboarding Drop-off Problem ---
+[03:40] Priya Nair: Yeah, I think the issue is that we're asking users to invite teammates before they've seen any value from the product. We're essentially asking for a commitment before we've earned it. My proposal is to move the invite step to after the first dashboard is set up — make it feel like a natural next step rather than a gate.
+
+[04:02] Sarah Chen: That makes sense. Can you spec that out as a separate initiative? It doesn't need to be Q3 — even Q4 is fine — but I want a proposal to share with the exec team.
+
+[04:14] Priya Nair: Sure, I'll have a write-up by next Friday.
+
+[04:20] Marcus Rivera: One last thing from my side — we need to decide on our approach to the new API versioning. We've been running v1 and v2 in parallel for eight months and the maintenance overhead is getting significant.
+
+[04:35] Sarah Chen: Can we sunset v1 before end of year?
+
+[04:39] Marcus Rivera: Realistically yes, but we'd need to notify customers at least 90 days in advance. If we send the deprecation notice in July, we could sunset in October.
+
+[04:50] Sarah Chen: Let's do it. Tom, can you draft the deprecation communication?
+
+[04:54] Tom Okafor: Yep, I'll need the technical details from Marcus but I can draft the customer-facing language.
+
+[05:01] Sarah Chen: Perfect. I think that covers everything. I'll send a summary after this call. Thanks everyone.
+
+[05:07] Marcus Rivera: Thanks.
+
+[05:08] Priya Nair: Thanks, bye.
+
+[05:09] Tom Okafor: Bye.
