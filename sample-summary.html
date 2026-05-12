@@ -1,98 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meeting Summary — Q3 Product Roadmap Review</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #1a1a1a;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 24px;
-      line-height: 1.6;
-    }
-    h1 { font-size: 22px; margin-bottom: 4px; }
-    .date { color: #666; font-size: 13px; margin-bottom: 24px; }
-    h2 { font-size: 17px; margin-top: 28px; margin-bottom: 8px; border-bottom: 1px solid #e0e0e0; padding-bottom: 4px; }
-    h3 { font-size: 15px; margin-top: 18px; margin-bottom: 4px; }
-    ul { padding-left: 20px; margin: 6px 0; }
-    li { margin-bottom: 5px; }
-    .annotation-block {
-      background: #f9f5ff;
-      border-left: 3px solid #7c3aed;
-      padding: 10px 14px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .annotation-block strong { color: #5b21b6; }
-    .participants { color: #555; font-size: 13px; margin-bottom: 20px; }
-  </style>
-</head>
-<body>
+<p><strong><span style="font-size: 1.2em;">Meeting: Q3 Product Roadmap Review</span></strong><br>
+Date: April 28, 2025</p>
 
-  <h1>Q3 Product Roadmap Review</h1>
-  <p class="date">April 28, 2025</p>
-  <p class="participants"><strong>Participants:</strong> Sarah Chen (Product Lead), Marcus Rivera (Engineering), Priya Nair (Design), Tom Okafor (Marketing)</p>
+<p><strong><span style="font-size: 1.2em;">Meeting Purpose:</span></strong></p>
+<p>To lock in Q3 product priorities and align on the dashboard redesign before engineering sprint planning commences next week.</p>
 
-  <h2>Meeting Purpose</h2>
-  <p>To align the product, engineering, design, and marketing teams on Q3 priorities — specifically finalizing the dashboard redesign scope, addressing Q2 carryover tickets, and setting a release timeline tied to the August conference.</p>
+<p><strong><span style="font-size: 1.2em;">Key Takeaways:</span></strong></p>
+<ul>
+    <li>Two Q2 carryover tickets (export feature and notification preferences) are prioritized as P0 for Q3.</li>
+    <li>The dashboard redesign will adopt a widget-based layout, with an initial launch of five core widgets targeted for mid-Q3.</li>
+    <li>The mid-Q3 dashboard redesign release will align with the annual conference in early August for maximum marketing impact.</li>
+    <li>A proposal will be developed to address the 34% drop-off in the onboarding flow by redesigning the "invite team" step.</li>
+    <li>API v1 will be deprecated by year-end, with customer notifications planned for July to allow for a 90-day transition period.</li>
+</ul>
 
-  <h2>Key Takeaways</h2>
-  <ul>
-    <li>The dashboard redesign will ship with <strong>five widgets</strong> (not six) in Q3, with the custom metrics panel deferred to a follow-up release to reduce engineering complexity.</li>
-    <li>The target release window is <strong>mid-Q3 (week of July 21)</strong>, timed to coincide with the annual conference for a live showcase.</li>
-    <li>The onboarding "invite your team" drop-off (34%) is a recognized problem; a redesign proposal will be scoped for Q4.</li>
-    <li>API v1 will be deprecated in October following a 90-day customer notice sent in July.</li>
-    <li>Two Q2 carryover tickets (export feature, notification preferences) are P0 priorities before new Q3 work begins.</li>
-  </ul>
+<p><strong><span style="font-size: 1.2em;">Topics (Detailed Breakdown):</span></strong></p>
 
-  <h2>Topics — Detailed Breakdown</h2>
+<p><strong>Q2 Carryover Tickets</strong></p>
+<ul>
+    <li>Discussion Point: Two tickets, the export feature and notification preferences page, were not completed in Q2 and are being carried over.</li>
+    <li>Problem: Unfinished work from the previous quarter impacting new development.</li>
+    <li>Solution: These are flagged as P0 priorities for Q3, meaning they will be addressed immediately.</li>
+    <li>Design Status: Priya confirmed export designs are done; notification preferences mobile states require two more days, with completion targeted by Thursday for Marcus's team.</li>
+</ul>
 
-  <h3>Q2 Carryover Tickets</h3>
-  <p>Two incomplete tickets from Q2 were flagged as P0 carryovers: the export feature and the notification preferences page. Export design specs are finalized. Priya will deliver mobile states for the notification preferences page by Thursday, allowing Marcus's team to begin that ticket on Friday.</p>
+<p><strong>Dashboard Redesign</strong></p>
+<ul>
+    <li>Problem: Enterprise customers (40 surveyed) find the current dashboard layout difficult because it surfaces all metrics by default instead of allowing users to configure their view.</li>
+    <li>Solution: The new design will implement a widget-based layout, enabling users to pin, remove, and reorder panels.</li>
+    <li>Initial Scope: Six widget types were proposed (Revenue summary, active users, churn rate, recent activity feed, goal tracker, custom metrics panel).</li>
+    <li>Phasing Decision: The "custom metrics panel" will be deferred to a follow-up release due to its estimated three weeks of complex backend engineering work.</li>
+    <li>Target Launch: The first five widgets are estimated to take ten days of engineering work and are targeted for a mid-Q3 release, which aligns perfectly with the annual conference in early August for showcasing.</li>
+    <li>Marketing Needs: Tom requires two weeks lead time for launch assets (email, in-app announcement, landing page) and needs final screenshots by July 7th for a target release week of July 21st.</li>
+</ul>
 
-  <h3>Dashboard Redesign — Widget-Based Layout</h3>
-  <p>The current dashboard shows all metrics by default, which enterprise customers find overwhelming. The redesign introduces a configurable widget layout where users can pin, reorder, and remove panels. Six widget types were designed; five will ship in Q3 (revenue summary, active users, churn rate, recent activity feed, goal tracker). The sixth — a custom metrics panel requiring user-defined backend queries — will be deferred due to an estimated three-week engineering effort.</p>
+<p><strong>Onboarding Flow Optimization</strong></p>
+<ul>
+    <li>Problem: A significant 34% drop-off occurs at the "invite your team" step in the onboarding flow. This is likely because users are asked for a commitment before they've experienced product value.</li>
+    <li>Proposed Solution: Move the "invite team" step to occur after the first dashboard is set up, framing it as a natural progression rather than a mandatory gate.</li>
+    <li>Next Steps: Priya will spec this out as a separate initiative for potential Q4 implementation and provide a proposal to share with the executive team.</li>
+</ul>
 
-  <h3>Conference Launch Target</h3>
-  <p>Marketing confirmed that a mid-Q3 release aligns with the annual conference in early August, making it an ideal showcase moment. Tom needs final screenshots by July 7 to prepare launch assets (email campaign, in-app announcement, landing page update). Marcus will prepare a sprint plan by end of week.</p>
+<p><strong>API Versioning and Deprecation</strong></p>
+<ul>
+    <li>Problem: Maintaining both API v1 and v2 in parallel for eight months has led to significant overhead for the engineering team.</li>
+    <li>Solution: Sunset API v1 by the end of the year to reduce maintenance burden.</li>
+    <li>Timeline: A 90-day customer notification period is required. Sending the deprecation notice in July would allow for a sunset in October.</li>
+    <li>Action: Tom will draft the customer-facing deprecation communication, requiring technical details from Marcus.</li>
+</ul>
 
-  <h3>Onboarding Drop-off</h3>
-  <p>A 34% drop-off at the "invite your team" step was discussed. Priya's hypothesis is that the step asks for a user commitment before the product has demonstrated value. The proposed fix is to move the invite prompt to after the first dashboard is configured, making it a natural next step rather than a gate. Priya will write up a proposal for exec review; implementation is targeted for Q4.</p>
+<p><strong><span style="font-size: 1.2em;">Next Steps:</span></strong></p>
+<ul>
+    <li><strong>Priya Nair:</strong> Finalize mobile states for Notification Preferences design specs by Thursday.</li>
+    <li><strong>Priya Nair:</strong> Share the Figma link for the dashboard redesign.</li>
+    <li><strong>Priya Nair:</strong> Prepare a write-up for the onboarding flow changes proposal by next Friday.</li>
+    <li><strong>Marcus Rivera:</strong> Develop a rough sprint plan for the 5 dashboard widgets by the end of the week.</li>
+    <li><strong>Tom Okafor:</strong> Draft the customer-facing API v1 deprecation communication (collaborate with Marcus for technical details).</li>
+    <li><strong>Sarah Chen:</strong> Send a summary of this meeting.</li>
+</ul>
 
-  <h3>API Versioning — v1 Deprecation</h3>
-  <p>Maintaining v1 and v2 in parallel for eight months has created significant engineering overhead. The team agreed to send a deprecation notice to customers in July and sunset v1 in October. Tom will draft the customer-facing communication; Marcus will provide the technical details.</p>
-
-  <h2>Next Steps</h2>
-  <ul>
-    <li><strong>Priya</strong> — Deliver notification preferences mobile states to Marcus by Thursday.</li>
-    <li><strong>Priya</strong> — Share Figma link for dashboard redesign after the call.</li>
-    <li><strong>Marcus</strong> — Prepare sprint plan for five-widget dashboard release by end of week.</li>
-    <li><strong>Tom</strong> — Prepare launch assets; requires final screenshots from engineering by July 7.</li>
-    <li><strong>Priya</strong> — Write up onboarding redesign proposal (move invite step post-setup) by next Friday.</li>
-    <li><strong>Tom</strong> — Draft API v1 deprecation communication (customer-facing language); coordinate with Marcus for technical details.</li>
-    <li><strong>Sarah</strong> — Send meeting summary to all participants.</li>
-  </ul>
-
-  <h2>Annotations</h2>
-
-  <div class="annotation-block">
-    <p><strong>🔖 Dashboard Redesign Scope</strong> [01:15]</p>
-    <p>Sarah explained that 40 enterprise customers flagged the current dashboard as too overwhelming, leading to the decision to build a configurable widget-based layout instead of showing all metrics by default.</p>
-  </div>
-
-  <div class="annotation-block">
-    <p><strong>🔖 Conference Launch Target</strong> [02:48]</p>
-    <p>The team aligned on a mid-Q3 release target timed to the annual conference in early August, with Tom confirming marketing needs final screenshots by July 7.</p>
-  </div>
-
-  <div class="annotation-block">
-    <p><strong>🔖 Onboarding Drop-off Problem</strong> [03:40]</p>
-    <p>Priya proposed moving the "invite your team" step to after the first dashboard setup to reduce the 34% drop-off by earning user trust before asking for a commitment.</p>
-  </div>
-
-</body>
-</html>
+<p><strong><span style="font-size: 1.2em;">Annotations (Highlights/Bookmarks):</span></strong></p>
+<ul>
+    <li><strong>HIGHLIGHT: Dashboard Redesign Scope</strong>
+        <p>The discussion focused on addressing customer feedback about the current dashboard layout being hard to configure, leading to the decision to implement a widget-based design with 5 core widgets launching first.</p>
+    </li>
+    <li><strong>BOOKMARK: Conference Launch Target</strong>
+        <p>The team decided to target a mid-Q3 release for the 5 core dashboard widgets, aiming to showcase the redesigned dashboard at the annual conference in early August.</p>
+    </li>
+    <li><strong>HIGHLIGHT: Onboarding Drop-off Problem</strong>
+        <p>The team identified a 34% drop-off at the "invite your team" step in the onboarding flow due to asking for commitment before demonstrating product value, prompting a proposal to relocate this step.</p>
+    </li>
+</ul>
